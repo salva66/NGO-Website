@@ -1,0 +1,28 @@
+from .models import Slides, Mission, Vision, Purpose, Values, Pcauses, Team, OutlookDets, ArticleDets, GalleryDets, About
+
+# Register your models here.
+
+@admin.register(Slides, Mission, Vision, Purpose, Values, Pcauses, Team, OutlookDets, ArticleDets, GalleryDets, About)
+class DefaultAdmin(admin.ModelAdmin):
+    pass
+
+
+####################about############################]
+<p>Ardent youth is an organization for community development from the mean level to the national level,
+                     by demonstrating effective ways of solving social problems through capacity building to the younger
+                    generation and fostering solidarity among themselves by performing the following.
+                  </p>
+                <p> Raising public awareness to the youths on various socio-economic matters and opportunities found in their
+                    communities.</p>
+
+                <p>Enhancing practising of various philanthropic, voluntarism and charitable events towards
+                    destitute communities. </p>
+
+                <p>Promote various youth talents and creative ideas across the nation. </p>
+
+                <p>Advocating the Suistanable Development Goals (SDGs) from the societal level to the national level. </p>
+
+                <p>Promote and support various national campaigns run by different government institutions related to the youths. </p>
+
+
+##############

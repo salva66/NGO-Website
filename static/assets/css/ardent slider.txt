@@ -1,0 +1,105 @@
+########################################################################################################
+@@@@@@@@@@@@@@@@@@@@@SLIDER@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@222222
+ <div class="slider">
+        <!-- Set up your HTML -->
+        
+        <div class="owl-carousel ">
+            <div class="slider-img">
+            {% for fproduct in slid %}
+                <div class="item">
+                    <div class="slider-img"><img src="{{fproduct.img.url}}" alt=""></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                <div class="animated bounceInDown slider-captions">
+                                    
+                                    <h1 class="slider-title">ARDENT YOUTHS</h1>
+                                    <p class="slider-text hidden-xs">TOGETHERNESS IS OUR MORALE</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="slider-img"><img src="{{fproduct.img.url}}" alt=""></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                <div class="animated bounceInDown slider-captions">
+                                    
+                                    <h1 class="slider-title">ARDENT YOUTHS</h1>
+                                    <p class="slider-text hidden-xs">TOGETHERNESS IS OUR MORALE</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-img"><img src="{{fproduct.img.url}}" alt=""></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                                <div class="animated bounceInDown slider-captions">
+                                    
+                                    <h1 class="slider-title">ARDENT YOUTHS</h1>
+                                    <p class="slider-text hidden-xs">TOGETHERNESS IS OUR MORALE</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            
+
+        </div>
+        
+    </div>           
+
+
+
+
+##########################################################################################################
+ @@@@VIEWS@@@@@@@@
+class IndexPageView(TemplateView):
+    template_name = 'index.html'
+
+    
+
+class AboutPageView(TemplateView):
+    template_name = 'about_us.html'
+
+class GalleryPageView(TemplateView):
+    template_name = 'gallery.html'
+
+class OutlookPageView(TemplateView):
+    template_name = 'outlook.html'
+
+class ContactPageView(TemplateView):
+    template_name = 'contact_us.html'
+
+class ServicesPageView(TemplateView):
+    template_name = 'articles.html'
+
+class VolunteerformPageView(TemplateView):
+    template_name = 'volunteerform.html'
+
+class ExecutivedirectorPageView(TemplateView):
+    template_name = 'executive_director.html'
+
+
+
+#####################################################################################
+@@@@@@URLS@@@@@@@@@@@@@@
+path('', views.IndexPageView.as_view(), name='index'),
+    path('about_us/', views.AboutPageView.as_view(), name='about_us'),
+    path('gallery/', views.GalleryPageView.as_view(), name='gallery'),
+    path('outlook/', views.OutlookPageView.as_view(), name='outlook'),
+    path('contact_us/', views.ContactPageView.as_view(), name='contact_us'),
+    path('articles/', views.ServicesPageView.as_view(), name='articles'),
+    path('volunteerform/', views.VolunteerformPageView.as_view(), name='volunteerform'),
+    path('executive_director/', views.ExecutivedirectorPageView.as_view(), name='executive_director'),
